@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api연습</title>
+</head>
+
+<body>
+    <h1>혜윤이의사이트</h1>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            method: "GET", 
+        url: "https://dapi.kakao.com/v2/search/web",
+            data: { query:"이효리"},
+            headers :{Authorization: "KakaoAK fb4f2a5abe11cdcde7d718efc2a44dc1 "
+        }}
+        )
+            .done(function (msg) {
+                alert("Data Saved: " + msg);
+            }); </script>
+</body>
+
+</html>
